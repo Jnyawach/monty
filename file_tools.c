@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * open_file - Open file
- * @file_name: the file namepath
+ * open_file - Open the files
+ * @file_name: files name path
  * Return: void
  */
 
@@ -19,8 +19,8 @@ void open_file(char *file_name)
 
 
 /**
- * read_file - Reads file
- * @fd: pointer to file descriptor
+ * read_file - Reads files
+ * @fd: pointer to files descriptor
  * Return: void
  */
 
@@ -39,13 +39,13 @@ void read_file(FILE *fd)
 
 
 /**
- * parse_line - Separate each line into token
- * which function to call
- * @buffer: line from the file
- * @line_number: line number
- * @format:  storage format. If 0 Nodes will be entered as a stack.
+ * parse_line - Separate each line into tokens
+ * which function to be called
+ * @buffer: line from the files
+ * @line_number: line numbers
+ * @format:  storage format, If 0 Nodes wil be entered as a stack
  * if 1 nodes will be entered as a queue.
- * Return: Returns 0 if the opcode is stack. 1 if queue.
+ * Return: Returns 0 if the opcode is stack, 1 if queue.
  */
 
 int parse_line(char *buffer, int line_number, int format)
@@ -120,13 +120,13 @@ void find_func(char *opcode, char *value, int ln, int format)
 
 
 /**
- * call_fun - Calls the required function.
- * @func: Pointer to the function that is about to be called.
- * @op: string representing the opcode.
- * @val: string representing a numeric value.
- * @ln: line numeber for the instruction.
- * @format: Format specifier. If 0 Nodes will be entered as a stack.
- * if 1 nodes will be entered as a queue.
+ * call_fun - Calls the required functions
+ * @func: Pointer to the function that is to be called
+ * @op: string representing the opcode
+ * @val: string representing a numeric value
+ * @ln: line numeber for the instructions
+ * @format: Format specifier, If 0 nodes will be entered as a stack
+ * if 1 nodes will be entered as a queue
  */
 void call_fun(op_func func, char *op, char *val, int ln, int format)
 {
@@ -158,4 +158,3 @@ void call_fun(op_func func, char *op, char *val, int ln, int format)
 	else
 		func(&head, ln);
 }
-

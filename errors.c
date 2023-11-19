@@ -1,16 +1,16 @@
 #include "monty.h"
 
 /**
- * err - Print appropriate error message based on error code.
+ * err - Prints the appropriate error message based on error codes
  * @error_code: The error codes are the following:
  * (1) => More than one file or no file given to the program.
  * (2) => Provided file is unreadable.
  * (3) => Provided file contains invalid instruction.
- * (4) => Program  unable to malloc more memory.
- * (5) => Parameter passed to the instruction "push" is not an int.
- * (6) => The stack it empty for pint.
- * (7) => The stack it empty for pop.
- * (8) => The stack is too short for operation.
+ * (4) => Program  un able to malloc more memory.
+ * (5) => Parameter passed to the instruction "push" is not an int
+ * (6) => The stack it empty for pint
+ * (7) => The stack it empty for pop
+ * (8) => The stack is too short for operations
  */
 void err(int error_code, ...)
 {
@@ -47,12 +47,12 @@ void err(int error_code, ...)
 }
 
 /**
- * more_err - handles errors.
+ * more_err - handles errors
  * @error_code: The error codes are the following:
- * (6) => The stack it empty for pint.
- * (7) => The stack it empty for pop.
- * (8) => The stack is too short for operation.
- * (9) => Division by zero.
+ * (6) => The stack it empty for the pint
+ * (7) => The stack it empty for the pop
+ * (8) => The stack is too short for operation
+ * (9) => Division by zero
  */
 void more_err(int error_code, ...)
 {
@@ -88,10 +88,10 @@ void more_err(int error_code, ...)
 }
 
 /**
- * string_err - handles errors.
+ * string_err - handles errors
  * @error_code: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
- * (11) ~> The stack is empty.
+ * (10) ~> The number inside node is out side ASCII bounds
+ * (11) ~> The stack is empty
  */
 void string_err(int error_code, ...)
 {
@@ -114,4 +114,3 @@ void string_err(int error_code, ...)
 	free_nodes();
 	exit(EXIT_FAILURE);
 }
-
